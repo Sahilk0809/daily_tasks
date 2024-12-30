@@ -1,16 +1,7 @@
 # daily_tasks
 
-A new Flutter project.
+<img src = "https://github.com/user-attachments/assets/1aef139a-02c7-4c5d-b6bb-8d959a3bd245" height = 65% width = 22%>
+<img src = "https://github.com/user-attachments/assets/48054b80-082a-4ebc-bd3b-25a68005e910" height = 65% width = 22%>
+<img src = "https://github.com/user-attachments/assets/e28c4221-ef33-4501-aac2-dbd36bd5c9ce" height = 65% width = 22%>
+<img src = "https://github.com/user-attachments/assets/06ba0561-d8ce-4a25-8345-0680403bce57" height = 65% width = 22%>
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
