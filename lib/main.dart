@@ -9,7 +9,7 @@ bool isDark = false;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-  isDark = sharedPreferences.getBool('isDarkTheme') ?? false;
+  sharedPreferences.getBool('isDarkTheme') ?? false;
 
   runApp(
     MultiProvider(
@@ -28,8 +28,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<TodoProvider>(context);
     return MaterialApp(
-      themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+      themeMode: provider.isDarkTheme ? ThemeMode.dark : ThemeMode.light,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,

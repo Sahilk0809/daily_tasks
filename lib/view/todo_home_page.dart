@@ -24,7 +24,7 @@ class TodoScreenState extends State<TodoScreen> {
         ),
         actions: [
           IconButton(
-            icon: Icon(provider.isGrid ? Icons.grid_view : Icons.list),
+            icon: Icon(provider.isGrid ? Icons.list : Icons.grid_view),
             onPressed: provider.toggleView,
           ),
           IconButton(
