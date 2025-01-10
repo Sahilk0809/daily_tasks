@@ -1,16 +1,10 @@
 # daily_tasks
 
-A new Flutter project.
+#3 Description
+A Flutter app for managing user data with online and offline functionality. It fetches user details from an API, stores them in SQLite for offline access, and allows read, update, and delete operations. The app uses connectivity_plus to detect internet status and switches seamlessly between online API data and offline local data. Features a clean and minimalistic UI for better user experience.
 
-## Getting Started
+<img src = "https://github.com/user-attachments/assets/379c14e2-d1c3-49c9-b6e8-87a8dd3c9ced" height = 65% width = 22%>
+<img src = "https://github.com/user-attachments/assets/251b79a5-5fe4-4ca1-8587-612f6a48c8df" height = 65% width = 22%>
+<img src = "https://github.com/user-attachments/assets/84da9cdf-b6ee-434a-a734-c8b5eff310ce" height = 65% width = 22%>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://github.com/user-attachments/assets/d8d2f04c-1f59-4ae5-833e-6303a5a7a0b2
