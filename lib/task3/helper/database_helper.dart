@@ -56,6 +56,16 @@ class DatabaseHelper {
     return await db.rawQuery(sql);
   }
 
+  Future<bool> userExits(int id) async {
+    final db = await database;
+    String sql = '''
+    SELECT * FROM users WHERE id  = ?;
+    ''';
+    List args = [id];
+    List<Map<String, Object?>> result = await db.rawQuery(sql, args);
+    return result.isNotEmpty;
+  }
+
   Future<void> updateData(DatabaseUsers user) async {
     final db = await database;
     String sql = '''
@@ -76,7 +86,7 @@ class DatabaseHelper {
       user.avatar,
       user.creationAt,
       user.updatedAt,
-      user.id
+      user.id,
     ];
     await db.rawUpdate(sql, args);
   }
