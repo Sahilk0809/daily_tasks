@@ -204,6 +204,7 @@ class HomeScreenState extends State<HomeScreen> {
                                         CustomTextField(
                                           hintText: "Name",
                                           controller: txtName,
+                                          prefixIcon: Icons.person,
                                         ),
                                         const SizedBox(
                                           height: 10,
@@ -211,6 +212,7 @@ class HomeScreenState extends State<HomeScreen> {
                                         CustomTextField(
                                           hintText: "Email",
                                           controller: txtEmail,
+                                          prefixIcon: Icons.mail,
                                         ),
                                         const SizedBox(
                                           height: 10,
@@ -218,6 +220,7 @@ class HomeScreenState extends State<HomeScreen> {
                                         CustomTextField(
                                           hintText: "Role",
                                           controller: txtRole,
+                                          prefixIcon: Icons.business,
                                         ),
                                         const SizedBox(
                                           height: 10,

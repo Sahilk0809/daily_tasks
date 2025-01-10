@@ -3,20 +3,19 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final IconData? prefixIcon;
-  final IconData? suffixIcon;
   final TextEditingController controller;
 
   const CustomTextField({
     super.key,
     required this.hintText,
     this.prefixIcon,
-    this.suffixIcon,
     required this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      cursorColor: Colors.blueAccent,
       controller: controller,
       decoration: InputDecoration(
         hintText: hintText,
@@ -28,12 +27,6 @@ class CustomTextField extends StatelessWidget {
         prefixIcon: prefixIcon != null
             ? Icon(
                 prefixIcon,
-                color: Colors.blueAccent,
-              )
-            : null,
-        suffixIcon: suffixIcon != null
-            ? Icon(
-                suffixIcon,
                 color: Colors.blueAccent,
               )
             : null,
