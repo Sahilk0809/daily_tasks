@@ -1,12 +1,8 @@
-import 'package:daily_tasks/provider/todo_provider.dart';
-import 'package:daily_tasks/task2/provider/user_provider.dart';
 import 'package:daily_tasks/task3/provider/users_provider.dart';
 import 'package:daily_tasks/task3/view/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'task2/view/login_screen.dart';
 
 bool isDark = false;
 
@@ -18,12 +14,6 @@ Future<void> main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) => TodoProvider(),
-        ),
-        ChangeNotifierProvider(
-          create: (context) => UserProvider(),
-        ),
         ChangeNotifierProvider(
           create: (context) => UsersProvider(),
         ),
