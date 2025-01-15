@@ -1,21 +1,22 @@
-import 'package:daily_tasks/task3/provider/users_provider.dart';
-import 'package:daily_tasks/task3/view/home_screen.dart';
+import 'package:daily_tasks/task4/view/auth_gate.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'firebase_options.dart';
+import 'task4/provider/user_provider.dart';
 
 bool isDark = false;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
-  sharedPreferences.getBool('isDarkTheme') ?? false;
-
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => UsersProvider(),
+          create: (context) => UserProvider(),
         ),
       ],
       child: const MyApp(),
@@ -33,38 +34,11 @@ class MyApp extends StatelessWidget {
       title: 'User Manager',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        colorScheme: const ColorScheme.light(
+          onSurface: Colors.black,
+        ),
       ),
-      home: const HomeScreen(),
+      home: const AuthGate(),
     );
   }
 }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: 'Login System App',
-//       theme: ThemeData(primarySwatch: Colors.blue),
-//       home: FutureBuilder<bool>(
-//         future: checkLoginStatus(),
-//         builder: (context, snapshot) {
-//           if (snapshot.connectionState == ConnectionState.waiting) {
-//             return const Center(child: CircularProgressIndicator());
-//           } else if (snapshot.hasData && snapshot.data == true) {
-//             return const HomeScreen(); // Navigate to Home if logged in
-//           } else {
-//             return const LoginScreen(); // Navigate to Login if not logged in
-//           }
-//         },
-//       ),
-//     );
-//   }
-//
-//   Future<bool> checkLoginStatus() async {
-//     SharedPreferences prefs = await SharedPreferences.getInstance();
-//     return prefs.getBool('isLoggedIn') ?? false;
-//   }
-// }

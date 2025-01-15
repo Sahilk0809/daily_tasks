@@ -4,18 +4,21 @@ class CustomTextField extends StatelessWidget {
   final String hintText;
   final IconData? prefixIcon;
   final TextEditingController controller;
+  final bool? obscureText;
 
   const CustomTextField({
     super.key,
     required this.hintText,
     this.prefixIcon,
     required this.controller,
+    this.obscureText,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      cursorColor: Colors.blueAccent,
+      obscureText: obscureText ?? false,
+      cursorColor: Colors.grey,
       controller: controller,
       decoration: InputDecoration(
         hintText: hintText,
@@ -32,16 +35,19 @@ class CustomTextField extends StatelessWidget {
             : null,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Colors.blueAccent, width: 1.5),
+          borderSide: const BorderSide(width: 1),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Colors.lightBlue, width: 2),
+          borderSide: const BorderSide(width: 2),
         ),
         filled: true,
-        fillColor: Colors.blue[50],
+        fillColor: Colors.grey[100],
       ),
-      style: const TextStyle(fontSize: 16, color: Colors.black),
+      style: const TextStyle(
+        fontSize: 16,
+        color: Colors.black,
+      ),
     );
   }
 }
