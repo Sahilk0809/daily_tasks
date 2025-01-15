@@ -1,16 +1,10 @@
 # daily_tasks
 
-A new Flutter project.
+## Description
+This Flutter app demonstrates a simple authentication flow using Firebase, featuring email/password sign-up and sign-in, Google Sign-In integration, and user data display from Firestore. It includes a clean UI with Provider for state management, and navigation between authentication and user screens. Perfect for learning Firebase authentication and Firestore integration in Flutter!
 
-## Getting Started
+<img src = "https://github.com/user-attachments/assets/488fcfeb-5b87-4411-baef-8717ddea9c32" height = 65% width = 22%>
+<img src = "https://github.com/user-attachments/assets/4a5318e2-c389-4653-8737-f034213e3d09" height = 65% width = 22%>
+<img src = "https://github.com/user-attachments/assets/040182bd-8a19-4c58-aad5-10f5e91ba3f7" height = 65% width = 22%>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://github.com/user-attachments/assets/23a0c602-c4fc-49d5-8ef0-3b5feab9082f
